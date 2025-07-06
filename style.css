@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('wallpaper.jpg');  /* your full-screen wallpaper */
+  background-size: cover;                 /* ensures full screen coverage */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+
+.nobita {
+  position: absolute;
+  bottom: 0;
+  right: -200px;         /* Start from off-screen */
+  height: 200px;
+  animation: walkLeft 10s linear infinite;
+}
+
+@keyframes walkLeft {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 100%;
+  }
+}
